@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "1",
+    "name": "Toyota Corolla ",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year": 2018,
+    "mileage": 45000,
+    "fuel": "Gasoline",
+    "gearbox": "Automatic",
+    "featuredImage": [
+      "/images/featured.png",
+      "/images/banner.webp",
+      "/images/featured.png"
+    ],
+    "location": "Paris",
+    "photos": ["photo1.jpg", "photo2.jpg", "photo3.jpg"],
+    "description": "A reliable and fuel-efficient sedan with a smooth automatic transmission.",
+    "price": 20000,
+    "url": "toyota-corolla"
+  },
+  {
+    "_id": "2",
+    "name": "Toyota Prius",
+    "brand": "Toyota",
+    "model": "Prius",
+    "year": 2018,
+    "mileage": 245000,
+    "fuel": "Gasoline",
+    "gearbox": "Automatic",
+    "featuredImage": [
+      "/images/featured.png",
+      "/images/banner.webp",
+      "/images/featured.png"
+    ],
+    "location": "Paris",
+    "photos": ["photo1.jpg", "photo2.jpg", "photo3.jpg"],
+    "description": "A reliable and fuel-efficient sedan with a smooth automatic transmission.",
+    "price": 20000,
+    "url": "toyota-prius"
+  },
+  {
+    "_id": "3",
+    "name": "Toyota C-HR",
+    "brand": "Toyota",
+    "model": "C-HR",
+    "year": 2011,
+    "mileage": 450000,
+    "fuel": "Gasoline",
+    "gearbox": "Manual",
+    "featuredImage": [
+      "/images/featured.png",
+      "/images/featured.png",
+      "/images/featured.png"
+    ],
+    "location": "Paris",
+    "photos": ["photo1.jpg", "photo2.jpg", "photo3.jpg"],
+    "description": "A reliable and fuel-efficient sedan with a smooth automatic transmission.",
+    "price": 80000,
+    "url": "toyota-chr"
+  },
+  {
+    "_id": "4",
+    "name": "Honda Civic",
+    "brand": "Honda",
+    "model": "Civic",
+    "year": 2020,
+    "mileage": 30000,
+    "fuel": "Gasoline",
+    "gearbox": "Manual",
+    "featuredImage": [
+      "/images/featured.png",
+      "/images/featured.png",
+      "/images/featured.png"
+    ],
+    "location": "Vincennes ",
+    "photos": ["photo4.jpg", "photo5.jpg", "photo6.jpg"],
+    "description": "Sporty design with excellent handling and manual transmission.",
+    "price": 22000,
+    "url": "honda-civic"
+  }
+]
