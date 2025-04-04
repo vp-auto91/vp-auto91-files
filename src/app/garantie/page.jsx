@@ -5,6 +5,7 @@ import React from "react";
 import { FaShieldAlt, FaCheckCircle, FaHeadset, FaClock } from "react-icons/fa";
 
 const Garantie = () => {
+  console.log("hello");
   return (
     <div className="">
       <Header />
