@@ -1,31 +1,66 @@
-// app/cars/[url]/page.jsx
+"use client";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import DefaultSingle from "@/Components/Single Page/DefaultSingle";
-import clientPromise from "@/app/lib/mongodb";
+import ProductSkeleton from "@/Components/Single Page/ProductSkeleton";
+import Header from "@/Components/Header/Header";
+import Footer from "@/Components/Footer";
 
-async function fetchProduct(url) {
-  try {
-    const client = await clientPromise;
-    const db = client.db("Hero-Cars"); // আপনার ডাটাবেসের নাম
-    const product = await db.collection("products").findOne({ url });
+export default function ProductPage() {
+  const { url } = useParams();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-    return product;
-  } catch (error) {
-    console.error("Error fetching product:", error);
-    return null;
+  useEffect(() => {
+    if (!url) return;
+
+    const fetchProduct = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(`/api/product?url=${encodeURIComponent(url)}`);
+
+        if (res.ok) {
+          const data = await res.json();
+          setProduct(data.product);
+        } else {
+          console.error("Failed to fetch product:", await res.json());
+        }
+      } catch (err) {
+        console.error("Error fetching product:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [url]);
+
+  if (loading) {
+    return (
+      <div className="">
+        <Header />
+        <ProductSkeleton />
+        <Footer />
+      </div>
+    );
   }
-}
-
-export default async function ProductPage({ params }) {
-  const { url } = params; // URL প্যারামিটার থেকে `url` নিন
-  const product = await fetchProduct(url);
 
   if (!product) {
-    return <p className="text-center mt-10">Product not found</p>;
+    return (
+      <div className="text-center mt-10 text-red-500">
+        Product not found
+        <div className="mt-4 text-sm text-gray-600">
+          No product matched: {url}
+        </div>
+      </div>
+    );
   }
 
   return (
-    <main>
+    <main className="">
+      <Header />
       <DefaultSingle product={product} />
+      <Footer />
     </main>
   );
 }

@@ -67,7 +67,10 @@ const ContactPage = () => {
     <div className="">
       <Header />
       <div className="mx-auto px-5 py-12">
-        <h1 className="text-2xl font-bold text-center mb-8">Contactez nous</h1>
+        <h2 className="text-2xl font-bold text-center text-orange-400 mb-4">
+          Contactez nous
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Left Side: Content */}
           <div className="space-y-6">

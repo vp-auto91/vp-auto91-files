@@ -57,7 +57,7 @@ const Header = () => {
             </ul>
           </div>
           <Link href="/" legacyBehavior>
-            <h1 className="text-5xl font-bold">CARS</h1>
+            <h1 className="text-3xl font-bold text-orange-300">VP AUTO 91</h1>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -91,7 +91,9 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           <Link href="/button-action" legacyBehavior>
-            <a className="btn">Button</a>
+            <button className=" px-5 py-2 rounded-md bg-orange-300 text-white ">
+              Call us today
+            </button>
           </Link>
         </div>
       </div>

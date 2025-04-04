@@ -48,7 +48,7 @@ const Page = () => {
           // Show login form if not logged in
           <div className="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-8">
             <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">
-              Dashboard Login
+              Tableau de bord
             </h1>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

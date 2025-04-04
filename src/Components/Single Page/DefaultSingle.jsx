@@ -1,13 +1,11 @@
 import React from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer";
+
 import ImageSlider from "./ImageSlider";
 
 const DefaultSingle = ({ product }) => {
   const images = product.images;
   return (
     <div className="">
-      <Header />
       <div className="my-16 mb-24 px-5 ">
         {/* Two-column grid for product details */}
         <div className="flex gap-10">
@@ -32,16 +30,26 @@ const DefaultSingle = ({ product }) => {
             <h1 className="text-xl font-bold text-gray-700 mb-5">
               {product?.model}
             </h1>
-            {/* Description */}
-            <p className="text-normal text-gray-700 mb-5">
-              {product?.description}
-            </p>
+            <div className="flex gap-5 mb-8">
+              {/* Brand */}
+              <div className="w-full border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Brand</span>
+                </p>
+                <p className="text-lg text-gray-800">{product?.brand}</p>
+              </div>
+
+              {/* Year */}
+              <div className="w-full border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Year</span>
+                </p>
+                <p className="text-lg text-gray-800">{product?.year}</p>
+              </div>
+            </div>
 
             <div className="flex gap-5">
-              <div className="w-1/2 text-white bg-orange-300 py-2.5 text-center  rounded-md">
-                <button className=" ">Email Us</button>
-              </div>
-              <div className="w-1/2 text-white bg-orange-300 py-2.5 text-center  rounded-md">
+              <div className="w-full text-white bg-orange-300 py-2.5 text-center  rounded-md">
                 <button className=" ">Contact Us</button>
               </div>
             </div>
@@ -49,6 +57,11 @@ const DefaultSingle = ({ product }) => {
         </div>
         <div className="my-24">
           <h1 className="text-center my-5">Details</h1>
+          <div className="flex">
+            <div className="md:w-2/3 mb-8 mx-auto text-justify">
+              <p>{product?.description}</p>
+            </div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4">
             {/* Gearbox */}
             <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100 ">
@@ -58,28 +71,12 @@ const DefaultSingle = ({ product }) => {
               <p className="text-lg text-gray-800">{product?.gearbox}</p>
             </div>
 
-            {/* Brand */}
-            <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">Brand</span>
-              </p>
-              <p className="text-lg text-gray-800">{product?.brand}</p>
-            </div>
-
-            {/* Year */}
-            <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">Year</span>
-              </p>
-              <p className="text-lg text-gray-800">{product?.year}</p>
-            </div>
-
             {/* Mileage */}
             <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
               <p className="text-sm text-gray-600">
-                <span className="font-semibold">Mileage</span>
+                <span className="font-semibold">KM</span>
               </p>
-              <p className="text-lg text-gray-800">{product?.mileage} miles</p>
+              <p className="text-lg text-gray-800">{product?.mileage} Km</p>
             </div>
 
             {/* Fuel */}
@@ -112,7 +109,6 @@ const DefaultSingle = ({ product }) => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

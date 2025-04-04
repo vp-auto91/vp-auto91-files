@@ -10,55 +10,53 @@ const Garantie = () => {
       <Header />
       <div className=" pt-12 pb-24">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-orange-400 mb-4">
-            Garantie et Services
+          <h2 className="text-2xl font-bold text-center text-orange-400 mb-4">
+            Nos garanties
           </h2>
           <div className="flex gap-8">
             <div className="md:w-1/2">
               {/* Introductory Text */}
               <p className="text-sm text-gray-600  text-justify mx-auto mb-5">
-                Chez nous, votre satisfaction et votre tranquillité d'esprit
-                sont notre priorité. Nous offrons une gamme complète de
-                garanties et services pour vous assurer une expérience d'achat
-                sans souci. Découvrez ci-dessous les avantages exclusifs que
-                nous proposons à nos clients.
+                Chez nous, chaque voiture vendue est bien plus qu’un simple
+                véhicule : c’est une promesse de qualité, de sécurité et de
+                tranquillité d’esprit. Depuis plus de 10 ans, notre garage
+                s'engage à offrir à ses clients des véhicules soigneusement
+                sélectionnés et entièrement révisés. Grâce à notre expérience,
+                notre priorité est de garantir votre satisfaction à chaque étape
+                de l’achat.
               </p>
               <p className="text-sm text-gray-600  text-justify mx-auto mb-5">
-                Chez nous, votre satisfaction et votre tranquillité d'esprit
-                sont notre priorité. Nous offrons une gamme complète de
-                garanties et services pour vous assurer une expérience d'achat
-                sans souci. Découvrez ci-dessous les avantages exclusifs que
-                nous proposons à nos clients.
-              </p>
-              <p className="text-sm text-gray-600  text-justify mx-auto mb-12">
-                Chez nous, votre satisfaction et votre tranquillité d'esprit
-                sont notre priorité. Nous offrons une gamme complète de
-                garanties et services pour vous assurer une expérience d'achat
-                sans souci. Découvrez ci-dessous les avantages exclusifs que
-                nous proposons à nos clients.
+                Avant d’être mise en vente, chaque voiture passe par notre
+                atelier pour un contrôle complet : révision mécanique, vidange,
+                remplacement des fluides, entretien courant, contrôle des
+                freins, pneus, batterie, et passage au contrôle technique. Vous
+                repartez avec une voiture en parfait état, prête à rouler, sans
+                mauvaise surprise.
               </p>
               <p className="text-sm text-gray-600  text-justify mx-auto mb-5">
-                Chez nous, votre satisfaction et votre tranquillité d'esprit
-                sont notre priorité. Nous offrons une gamme complète de
-                garanties et services pour vous assurer une expérience d'achat
-                sans souci. Découvrez ci-dessous les avantages exclusifs que
-                nous proposons à nos clients.
+                Nous savons qu’acheter une voiture est une décision importante.
+                C’est pourquoi toutes nos voitures sont vendues avec 3 mois de
+                garantie, vous offrant une sécurité supplémentaire et
+                l’assurance d’un service après-vente réactif et professionnel en
+                cas de besoin. En tant que garage professionnel, nous avons
+                l'expertise nécessaire pour vous accompagner en toute confiance.
               </p>
-              <p className="text-sm text-gray-600  text-justify mx-auto mb-12">
-                Chez nous, votre satisfaction et votre tranquillité d'esprit
-                sont notre priorité. Nous offrons une gamme complète de
-                garanties et services pour vous assurer une expérience d'achat
-                sans souci. Découvrez ci-dessous les avantages exclusifs que
-                nous proposons à nos clients.
+              <p className="text-sm text-gray-600  text-justify mx-auto mb-5">
+                Forts de 10 années d’existence, nous avons su bâtir une relation
+                de confiance avec nos clients. Notre réputation repose sur
+                la transparence, la qualité de nos véhicules et l’attention
+                portée à chaque acheteur. Que vous cherchiez une citadine, une
+                familiale ou un utilitaire, vous trouverez chez nous un véhicule
+                fiable, révisé, garanti, et prêt à vous accompagner.
               </p>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 ">
               <Image
-                src="/images/banner.webp"
+                src="/images/g2.webp"
                 alt="Hybrid Electric Cars"
-                width={700}
+                width={600}
                 height={500}
-                className="rounded-lg object-fill"
+                className="rounded-lg mx-auto"
               />
             </div>
           </div>

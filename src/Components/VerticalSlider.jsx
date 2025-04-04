@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const VerticalSlider = () => {
   const texts = [
-    "Un financement adapté à vos besoins • Une démarche simple et rapide • 100% en ligne",
-    "Calculez votre budget de financement maintenant! ",
+    "Entretien et revision complète! Possibilité de réserver en ligne.",
+    "Garantie 3 mois!  ",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
