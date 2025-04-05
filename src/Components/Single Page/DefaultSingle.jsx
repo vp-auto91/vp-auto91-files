@@ -8,7 +8,7 @@ const DefaultSingle = ({ product }) => {
     <div className="">
       <div className="my-16 mb-24 px-5 ">
         {/* Two-column grid for product details */}
-        <div className="flex gap-10">
+        <div className="md:flex gap-10">
           {/* Left Column: Product Images */}
           <div className="md:w-2/3 ">
             {/* Main Image */}
@@ -18,7 +18,7 @@ const DefaultSingle = ({ product }) => {
           </div>
 
           {/* Right Column: Product Details */}
-          <div className="md:w-1/3 ">
+          <div className="md:w-1/3 mt-8 md:mt-0">
             {/* Product Name */}
             <h1 className="text-3xl font-bold text-orange-400">
               {product?.name}

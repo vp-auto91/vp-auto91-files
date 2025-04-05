@@ -67,7 +67,7 @@ const ContactPage = () => {
     <div className="">
       <Header />
       <div className="mx-auto px-5 py-12">
-        <h2 className="text-2xl font-bold text-center text-orange-400 mb-4">
+        <h2 className="text-2xl font-bold text-center text-orange-300 mb-4">
           Contactez nous
         </h2>
 

@@ -118,3 +118,10 @@ body {
     }
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  /* Add your styles here for screens 320px wide or smaller */
+  .garantie {
+    flex-direction: column-reverse;
+  }
+}

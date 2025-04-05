@@ -120,7 +120,7 @@ const Featured = () => {
             name="brand"
             onChange={handleFilterChange}
             value={filters.brand}
-            className="border border-orange-300 text-sm rounded-lg px-2 mr-2"
+            className="border border-orange-300 text-sm rounded-lg px-2 mr-2 mb-2 md:mb-0"
           >
             <option value="">Marque</option>
             {brands.map((brand, index) => (
@@ -134,7 +134,7 @@ const Featured = () => {
             name="model"
             onChange={handleFilterChange}
             value={filters.model}
-            className="border border-orange-300 text-sm rounded-lg px-2 mr-2"
+            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Modèle</option>
             {models.map((model, index) => (
@@ -148,7 +148,7 @@ const Featured = () => {
             name="fuel"
             onChange={handleFilterChange}
             value={filters.fuel}
-            className="border border-orange-300 text-sm rounded-lg px-2 mr-2"
+            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Energie</option>
             {fuels.map((fuel, index) => (
@@ -162,7 +162,7 @@ const Featured = () => {
             name="gearbox"
             onChange={handleFilterChange}
             value={filters.gearbox}
-            className="border border-orange-300 text-sm rounded-lg px-2 mr-2"
+            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Transmission</option>
             {gearboxes.map((gearbox, index) => (
@@ -176,7 +176,7 @@ const Featured = () => {
             name="location"
             onChange={handleFilterChange}
             value={filters.location}
-            className="border border-orange-300 text-sm rounded-lg px-2 mr-2"
+            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Localisation</option>
             {locations.map((location, index) => (

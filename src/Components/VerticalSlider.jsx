@@ -16,11 +16,11 @@ const VerticalSlider = () => {
   }, [texts.length]);
 
   return (
-    <div className="h-10 overflow-hidden relative">
+    <div className="h-12 overflow-hidden relative">
       {texts.map((text, index) => (
         <div
           key={index}
-          className="absolute w-full h-10 flex items-center justify-center text-normal transition-transform duration-500"
+          className="absolute w-full h-12 flex items-center justify-center text-normal transition-transform duration-500"
           style={{
             transform: `translateY(${(index - currentIndex) * 100}%)`,
           }}

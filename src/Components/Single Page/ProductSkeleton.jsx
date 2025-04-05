@@ -2,9 +2,9 @@ export default function ProductSkeleton() {
   return (
     <div className="px-5 py-16">
       <div className="animate-pulse">
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="md:flex flex-col lg:flex-row gap-6">
           {/* Image + thumbnails */}
-          <div className="w-2/3 space-y-4">
+          <div className="md:w-2/3 space-y-4">
             {/* Main image skeleton */}
             <div className="w-full h-[400px] bg-gray-300 rounded-xl shimmer" />
 

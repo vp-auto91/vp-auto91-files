@@ -157,7 +157,7 @@ export default function EditableProducts() {
 
   return (
     <div className="w-full mx-auto overflow-y-scroll max-h-[700px] px-5">
-      <h1 className="text-2xl font-bold mb-6">Product Management</h1>
+      <h1 className="text-2xl font-bold mb-6">Edit Product </h1>
 
       <div className="grid grid-cols-1 gap-6">
         {products.map((product) => (
@@ -232,16 +232,16 @@ export default function EditableProducts() {
                 </div>
 
                 {/* Extra Fields */}
-                <div>
+                <div className="">
                   <h2 className="text-xl font-semibold mb-4">Extra Fields</h2>
                   {editForm.extraFields.map((field, index) => (
-                    <div key={index} className="flex gap-2 mb-2">
+                    <div key={index} className="md:flex gap-2 mb-2">
                       <input
                         type="text"
                         name="name"
                         value={field.name}
                         onChange={(e) => handleExtraFieldChange(e, index)}
-                        className="flex-1 p-2 border rounded"
+                        className="flex-1 p-2 border rounded md:mb-0 mb-5"
                         placeholder="Field name"
                       />
                       <input
@@ -261,7 +261,7 @@ export default function EditableProducts() {
                       </button>
                     </div>
                   ))}
-                  <div className="flex gap-2 mt-3">
+                  <div className="md:flex gap-2 mt-3">
                     <input
                       type="text"
                       name="name"
@@ -272,7 +272,7 @@ export default function EditableProducts() {
                           name: e.target.value,
                         })
                       }
-                      className="flex-1 p-2 border rounded"
+                      className="flex-1 p-2 border rounded md:mb-0 mb-5"
                       placeholder="New field name"
                     />
                     <input
@@ -285,7 +285,7 @@ export default function EditableProducts() {
                           value: e.target.value,
                         })
                       }
-                      className="flex-1 p-2 border rounded"
+                      className="flex-1 p-2 border rounded md:mb-0 mb-5"
                       placeholder="New field value"
                     />
                     <button
@@ -365,7 +365,7 @@ export default function EditableProducts() {
               </form>
             ) : (
               <div className="space-y-4">
-                <div className="flex justify-between items-start">
+                <div className="md:flex justify-between items-start">
                   <div>
                     <h2 className="text-2xl font-bold text-orange-500">
                       {product.name}

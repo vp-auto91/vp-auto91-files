@@ -1,16 +1,60 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+
+  const handleLinkClick = (href) => {
+    setMenuOpen(false);
+    router.push(href);
+  };
+
   return (
     <div className="w-full bg-white shadow-md sticky top-0 z-50 px-5 py-2">
-      <div className="navbar">
-        <div className="navbar-start ">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+      <div className="navbar max-w-[100vw] flex justify-between items-center">
+        <div className="navbar-start">
+          <Link href="/" legacyBehavior>
+            <a className="text-xl md:text-3xl font-bold text-orange-300">
+              VP AUTO 91
+            </a>
+          </Link>
+        </div>
+
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 font-[500]">
+            <li>
+              <Link href="/">NOS VOITURES</Link>
+            </li>
+            <li>
+              <Link href="/garantie">GARANTIE</Link>
+            </li>
+            <li>
+              <Link href="/about-us">QUI SOMMES NOUS</Link>
+            </li>
+            <li>
+              <Link href="/contact">CONTACT</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="navbar-end">
+          <Link href="/button-action" legacyBehavior>
+            <button className="px-5 py-2 rounded-md bg-orange-300 text-white hidden md:block">
+              Call us today
+            </button>
+          </Link>
+
+          <div className="lg:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="btn btn-ghost"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -19,84 +63,41 @@ const Header = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
+                  d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <Link href="/item1" legacyBehavior>
-                  <a className="text-sm">Item 1</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/parent" legacyBehavior>
-                  <a className="text-sm">Parent</a>
-                </Link>
-                <ul className="p-2">
-                  <li>
-                    <Link href="/submenu1" legacyBehavior>
-                      <a className="text-sm">Submenu 1</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/submenu2" legacyBehavior>
-                      <a className="text-sm">Submenu 2</a>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/item3" legacyBehavior>
-                  <a className="text-sm">Item 3</a>
-                </Link>
-              </li>
-            </ul>
+            </button>
           </div>
-          <Link href="/" legacyBehavior>
-            <h1 className="text-3xl font-bold text-orange-300">VP AUTO 91</h1>
-          </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-[500]">
-            {/* <li>
-              <Link href="/" legacyBehavior>
-                <a>ACC className="text-sm"EUIL</a>
-              </Link>
-            </li> */}
-            <li>
-              <Link href="/" legacyBehavior>
-                <a className="text-sm">NOS VOITURES</a>
-              </Link>
+      </div>
+
+      {menuOpen && (
+        <div className="w-full fixed top-[68px] left-0 right-0 bg-white shadow-lg z-40">
+          <ul className="flex flex-col font-medium text-sm">
+            <li className="border-b" onClick={() => handleLinkClick("/")}>
+              <a className="block w-full py-4 px-6">NOS VOITURES</a>
             </li>
-            <li>
-              <Link href="/garantie" legacyBehavior>
-                <a className="text-sm">GARANTIE</a>
-              </Link>
+            <li
+              className="border-b"
+              onClick={() => handleLinkClick("/garantie")}
+            >
+              <a className="block w-full py-4 px-6">GARANTIE</a>
             </li>
-            <li>
-              <Link href="/about-us" legacyBehavior>
-                <a className="text-sm">QUI SOMMES NOUS</a>
-              </Link>
+            <li
+              className="border-b"
+              onClick={() => handleLinkClick("/about-us")}
+            >
+              <a className="block w-full py-4 px-6">QUI SOMMES NOUS</a>
             </li>
-            <li>
-              <Link href="/contact" legacyBehavior>
-                <a className="text-sm">CONTACT</a>
-              </Link>
+            <li
+              className="border-b"
+              onClick={() => handleLinkClick("/contact")}
+            >
+              <a className="block w-full py-4 px-6">CONTACT</a>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <Link href="/button-action" legacyBehavior>
-            <button className=" px-5 py-2 rounded-md bg-orange-300 text-white ">
-              Call us today
-            </button>
-          </Link>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

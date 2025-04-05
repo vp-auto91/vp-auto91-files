@@ -31,7 +31,7 @@ const ImageSlider = ({ images }) => {
           alt={`Slide ${currentIndex}`}
           className="w-full max-h-[400px] object-cover rounded-lg shadow-lg"
         />
-        <div className="absolute bottom-5 right-10 flex justify-between items-center gap-10">
+        <div className="absolute bottom-5 md:right-10 right-24 flex justify-between items-center gap-10">
           <button
             onClick={goToPrevious}
             className="   bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition"

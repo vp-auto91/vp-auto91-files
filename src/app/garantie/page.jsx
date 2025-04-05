@@ -11,10 +11,10 @@ const Garantie = () => {
       <Header />
       <div className=" pt-12 pb-24">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-center text-orange-400 mb-4">
+          <h2 className="text-2xl font-bold text-center text-orange-300 mb-4">
             Nos garanties
           </h2>
-          <div className="flex gap-8">
+          <div className="flex garantie gap-8">
             <div className="md:w-1/2">
               {/* Introductory Text */}
               <p className="text-sm text-gray-600  text-justify mx-auto mb-5">

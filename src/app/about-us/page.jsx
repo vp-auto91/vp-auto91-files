@@ -8,7 +8,7 @@ const AboutUs = () => {
       {/* Mission Statement */}
       <div className="pt-12 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="mb-32">
-          <h2 className="text-2xl font-bold text-center text-orange-400 mb-4">
+          <h2 className="text-2xl font-bold text-center text-orange-300 mb-4">
             Qui sommes-nous ?
           </h2>
 
