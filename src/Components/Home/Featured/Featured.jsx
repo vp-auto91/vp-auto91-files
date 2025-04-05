@@ -112,7 +112,7 @@ const Featured = () => {
             placeholder="Search by make, model or keyword (e.g. Renault Clio)"
             value={searchTerm}
             onChange={handleSearchChange}
-            className="border border-orange-300 text-sm rounded-lg p-2 w-full"
+            className="border border-red-500 text-sm rounded-lg p-2 w-full"
           />
         </div>
         <div className="flex justify-center flex-wrap mt-4">
@@ -120,7 +120,7 @@ const Featured = () => {
             name="brand"
             onChange={handleFilterChange}
             value={filters.brand}
-            className="border border-orange-300 text-sm rounded-lg px-2 mr-2 mb-2 md:mb-0"
+            className="border border-red-500 text-sm rounded-lg px-2 mr-2 mb-2 md:mb-0"
           >
             <option value="">Marque</option>
             {brands.map((brand, index) => (
@@ -134,7 +134,7 @@ const Featured = () => {
             name="model"
             onChange={handleFilterChange}
             value={filters.model}
-            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
+            className="border border-red-500 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Modèle</option>
             {models.map((model, index) => (
@@ -148,7 +148,7 @@ const Featured = () => {
             name="fuel"
             onChange={handleFilterChange}
             value={filters.fuel}
-            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
+            className="border border-red-500 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Energie</option>
             {fuels.map((fuel, index) => (
@@ -162,7 +162,7 @@ const Featured = () => {
             name="gearbox"
             onChange={handleFilterChange}
             value={filters.gearbox}
-            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
+            className="border border-red-500 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Transmission</option>
             {gearboxes.map((gearbox, index) => (
@@ -176,7 +176,7 @@ const Featured = () => {
             name="location"
             onChange={handleFilterChange}
             value={filters.location}
-            className="border border-orange-300 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
+            className="border border-red-500 text-sm rounded-lg px-2  mr-2 mb-2 md:mb-0"
           >
             <option value="">Localisation</option>
             {locations.map((location, index) => (
@@ -188,7 +188,7 @@ const Featured = () => {
 
           <button
             onClick={clearFilters}
-            className="border border-orange-300 text-sm rounded-lg px-5 bg-orange-300 text-white hover:bg-red-600 transition"
+            className="border border-red-500 text-sm rounded-lg px-5 bg-red-500 text-white hover:bg-red-600 transition"
           >
             Remise à 0
           </button>
@@ -249,9 +249,9 @@ const Featured = () => {
                       Gearbox: {car.gearbox}
                     </p>
                   </div>
-                  <p className="text-orange-400 text-sm">{car.price} €</p>
+                  <p className="text-red-500 text-sm">{car.price} €</p>
                 </div>
-                <button className="cursor-pointer mt-4 w-full bg-orange-300 text-white py-2 rounded-lg hover:bg-orange-400 transition text-sm">
+                <button className="cursor-pointer mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-500 transition text-sm">
                   View Details
                 </button>
               </div>
@@ -264,7 +264,7 @@ const Featured = () => {
           <p className="text-lg text-gray-600 mb-4">
             No cars found. Try adjusting your filters or{" "}
             <span
-              className="text-orange-300 cursor-pointer"
+              className="text-red-500 cursor-pointer"
               onClick={clearFilters}
             >
               search directly
@@ -297,9 +297,9 @@ const Featured = () => {
                       Gearbox: {car.gearbox}
                     </p>
                   </div>
-                  <p className="text-orange-400 text-sm">{car.price} €</p>
+                  <p className="text-red-500 text-sm">{car.price} €</p>
                 </div>
-                <button className="cursor-pointer mt-4 w-full bg-orange-300 text-white py-2 rounded-lg hover:bg-orange-400 transition text-sm">
+                <button className="cursor-pointer mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-500 transition text-sm">
                   View Details
                 </button>
               </div>

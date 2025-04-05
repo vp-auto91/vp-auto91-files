@@ -400,7 +400,7 @@ export default function EditableProducts() {
                       product[field] && (
                         <div
                           key={field}
-                          className="border border-orange-300 rounded-lg p-3 bg-gray-100"
+                          className="border border-red-500 rounded-lg p-3 bg-gray-100"
                         >
                           <p className="text-sm text-gray-600 font-semibold capitalize">
                             {field}
@@ -412,7 +412,7 @@ export default function EditableProducts() {
                   {product.extraFields?.map((field, index) => (
                     <div
                       key={index}
-                      className="border border-orange-300 rounded-lg p-3 bg-gray-100"
+                      className="border border-red-500 rounded-lg p-3 bg-gray-100"
                     >
                       <p className="text-sm text-gray-600 font-semibold">
                         {field.name}

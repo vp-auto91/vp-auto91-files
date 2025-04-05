@@ -20,11 +20,9 @@ const DefaultSingle = ({ product }) => {
           {/* Right Column: Product Details */}
           <div className="md:w-1/3 mt-8 md:mt-0">
             {/* Product Name */}
-            <h1 className="text-3xl font-bold text-orange-400">
-              {product?.name}
-            </h1>
+            <h1 className="text-3xl font-bold text-red-500">{product?.name}</h1>
             {/* Price */}
-            <p className="text-lg text-orange-400 font-bold my-3 ">
+            <p className="text-lg text-red-500 font-bold my-3 ">
               {product?.price}€
             </p>
             <h1 className="text-xl font-bold text-gray-700 mb-5">
@@ -32,7 +30,7 @@ const DefaultSingle = ({ product }) => {
             </h1>
             <div className="flex gap-5 mb-8">
               {/* Brand */}
-              <div className="w-full border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
+              <div className="w-full border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
                   <span className="font-semibold">Brand</span>
                 </p>
@@ -40,7 +38,7 @@ const DefaultSingle = ({ product }) => {
               </div>
 
               {/* Year */}
-              <div className="w-full border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
+              <div className="w-full border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
                   <span className="font-semibold">Year</span>
                 </p>
@@ -49,7 +47,7 @@ const DefaultSingle = ({ product }) => {
             </div>
 
             <div className="flex gap-5">
-              <div className="w-full text-white bg-orange-300 py-2.5 text-center  rounded-md">
+              <div className="w-full text-white bg-red-500 py-2.5 text-center  rounded-md">
                 <button className=" ">Contact Us</button>
               </div>
             </div>
@@ -64,7 +62,7 @@ const DefaultSingle = ({ product }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4">
             {/* Gearbox */}
-            <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100 ">
+            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100 ">
               <p className="text-sm text-gray-600">
                 <span className="font-semibold">Gearbox</span>
               </p>
@@ -72,7 +70,7 @@ const DefaultSingle = ({ product }) => {
             </div>
 
             {/* Mileage */}
-            <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
+            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
               <p className="text-sm text-gray-600">
                 <span className="font-semibold">KM</span>
               </p>
@@ -80,7 +78,7 @@ const DefaultSingle = ({ product }) => {
             </div>
 
             {/* Fuel */}
-            <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
+            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
               <p className="text-sm text-gray-600">
                 <span className="font-semibold">Fuel</span>
               </p>
@@ -88,7 +86,7 @@ const DefaultSingle = ({ product }) => {
             </div>
 
             {/* Location */}
-            <div className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100">
+            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
               <p className="text-sm text-gray-600">
                 <span className="font-semibold">Location</span>
               </p>
@@ -98,7 +96,7 @@ const DefaultSingle = ({ product }) => {
             {product?.extraFields?.map((field, index) => (
               <div
                 key={index}
-                className="border border-orange-300 rounded-lg p-4 shadow-sm bg-gray-100"
+                className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100"
               >
                 <p className="text-sm text-gray-600">
                   <span className="font-semibold">{field.name}</span>

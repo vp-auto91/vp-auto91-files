@@ -17,7 +17,7 @@ const Header = () => {
       <div className="navbar max-w-[100vw] flex justify-between items-center">
         <div className="navbar-start">
           <Link href="/" legacyBehavior>
-            <a className="text-xl md:text-3xl font-bold text-orange-300">
+            <a className="text-xl md:text-3xl font-bold text-red-500">
               VP AUTO 91
             </a>
           </Link>
@@ -42,7 +42,7 @@ const Header = () => {
 
         <div className="navbar-end">
           <Link href="/button-action" legacyBehavior>
-            <button className="px-5 py-2 rounded-md bg-orange-300 text-white hidden md:block">
+            <button className="px-5 py-2 rounded-md bg-red-500 text-white hidden md:block">
               Call us today
             </button>
           </Link>

@@ -11,7 +11,7 @@ const Garantie = () => {
       <Header />
       <div className=" pt-12 pb-24">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-center text-orange-300 mb-4">
+          <h2 className="text-2xl font-bold text-center text-red-500 mb-4">
             Nos garanties
           </h2>
           <div className="flex garantie gap-8">
@@ -66,7 +66,7 @@ const Garantie = () => {
             {/* Point 1: Garantie Complète */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="flex justify-center">
-                <FaShieldAlt className="text-4xl text-orange-400 mb-4" />
+                <FaShieldAlt className="text-4xl text-red-500 mb-4" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Garantie Complète</h3>
               <p className="text-gray-600">
@@ -78,7 +78,7 @@ const Garantie = () => {
             {/* Point 2: Véhicules Vérifiés */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="flex justify-center">
-                <FaCheckCircle className="text-4xl text-orange-400 mb-4" />
+                <FaCheckCircle className="text-4xl text-red-500 mb-4" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Véhicules Vérifiés</h3>
               <p className="text-gray-600">
@@ -90,7 +90,7 @@ const Garantie = () => {
             {/* Point 3: Support Client 24/7 */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="flex justify-center">
-                <FaHeadset className="text-4xl text-orange-400 mb-4" />
+                <FaHeadset className="text-4xl text-red-500 mb-4" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Support Client 24/7
@@ -104,7 +104,7 @@ const Garantie = () => {
             {/* Point 4: Service Rapide */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="flex justify-center">
-                <FaClock className="text-4xl text-orange-400 mb-4" />
+                <FaClock className="text-4xl text-red-500 mb-4" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Service Rapide</h3>
               <p className="text-gray-600">

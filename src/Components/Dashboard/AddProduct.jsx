@@ -308,7 +308,7 @@ const AddProductForm = () => {
           <button
             type="button"
             onClick={addField}
-            className="border border-orange-300 w-full hover:bg-orange-300 text-gray-700 mt-3 px-4 py-2 rounded-md"
+            className="border border-red-500 w-full hover:bg-red-500 text-gray-700 mt-3 px-4 py-2 rounded-md"
           >
             Add Field
           </button>
@@ -340,7 +340,7 @@ const AddProductForm = () => {
         <div className="text-center mt-5">
           <button
             type="submit"
-            className="bg-orange-300 hover:bg-orange-400 cursor-pointer text-white px-8 py-2 rounded-md"
+            className="bg-red-500 hover:bg-orange-400 cursor-pointer text-white px-8 py-2 rounded-md"
             disabled={loading}
           >
             {loading ? "Adding Product..." : "Add Product"}

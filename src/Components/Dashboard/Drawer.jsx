@@ -15,7 +15,7 @@ const Drawer = () => {
           <div className="drawer-content flex flex-col items-center justify-center">
             <label
               htmlFor="my-drawer-2"
-              className="btn btn-primary drawer-button lg:hidden bg-orange-300 border-none"
+              className="btn btn-primary drawer-button lg:hidden bg-red-500 border-none"
             >
               Open drawer
             </label>
@@ -26,7 +26,7 @@ const Drawer = () => {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <ul className="menu bg-white border-r-1 border-orange-300 text-black min-h-full w-80 p-4 z-50">
+            <ul className="menu bg-white border-r-1 border-red-500 text-black min-h-full w-80 p-4 z-50">
               <li>
                 <a
                   onClick={() => setActiveView("add")}

@@ -67,7 +67,7 @@ const ContactPage = () => {
     <div className="">
       <Header />
       <div className="mx-auto px-5 py-12">
-        <h2 className="text-2xl font-bold text-center text-orange-300 mb-4">
+        <h2 className="text-2xl font-bold text-center text-red-500 mb-4">
           Contactez nous
         </h2>
 
@@ -182,7 +182,7 @@ const ContactPage = () => {
                   required
                 />
               </div>
-              <p className="text-orange-300">
+              <p className="text-red-500">
                 {isTel
                   ? "Erreur lors de l'envoi du formulaire, vérifier votre numéro de téléphone"
                   : ""}
@@ -192,7 +192,7 @@ const ContactPage = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-orange-300 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition duration-300"
+                  className="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-500 transition duration-300"
                 >
                   Submit
                 </button>
@@ -205,7 +205,7 @@ const ContactPage = () => {
                 Formulaire envoyé avec succès
               </div>
             ) : (
-              <p className="text-orange-300"></p>
+              <p className="text-red-500"></p>
             )}
           </div>
         </div>
