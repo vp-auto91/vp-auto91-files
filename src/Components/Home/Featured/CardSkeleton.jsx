@@ -11,7 +11,7 @@ export default function ProductCardSkeleton() {
       {/* Info lines */}
       <div className="h-4 w-2/3 bg-gray-300 rounded" />
       <div className="h-4 w-2/4 bg-gray-300 rounded" />
-      <div className="h-4 w-3/5 bg-gray-300 rounded" />
+      {/* <div className="h-4 w-3/5 bg-gray-300 rounded" /> */}
 
       {/* Button */}
       <div className="h-10 w-full bg-gray-300 rounded-lg mt-2" />
