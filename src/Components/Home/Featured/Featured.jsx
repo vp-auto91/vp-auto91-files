@@ -279,15 +279,18 @@ const Featured = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {getSimilarProducts().map((car, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-lg">
-                <div className="relative h-40 w-full mb-4">
+                <div className="relative w-full mb-4 aspect-video">
+                  {" "}
+                  {/* 16:9 aspect ratio */}
                   <Image
-                    src={car.images[0]}
+                    src={car?.images[0]}
                     alt={`${car.brand} ${car.model}`}
-                    width={400}
-                    height={400}
-                    className="rounded-lg"
+                    fill
+                    className="rounded-lg object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
+
                 <div className="flex justify-between">
                   <div>
                     <h3 className="text-lg font-semibold">{car.name}</h3>
