@@ -229,13 +229,15 @@ const Featured = () => {
               }`}
             >
               <div className="bg-white p-4 rounded-lg shadow-lg">
-                <div className="relative w-full mb-4">
+                <div className="relative w-full mb-4 aspect-video">
+                  {" "}
+                  {/* 16:9 aspect ratio */}
                   <Image
                     src={car?.images[0]}
                     alt={`${car.brand} ${car.model}`}
-                    width={400}
-                    height={400}
-                    className="rounded-lg"
+                    fill
+                    className="rounded-lg object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <div className="flex justify-between">

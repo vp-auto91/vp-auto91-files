@@ -1,6 +1,4 @@
-// components/ImageSlider.js
-"use client"; // Required for client-side interactivity in Next.js App Router
-
+"use client";
 import { useState } from "react";
 
 const ImageSlider = ({ images }) => {
@@ -23,47 +21,60 @@ const ImageSlider = ({ images }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      {/* Main Image */}
-      <div className="relative w-full ">
+    <div className="flex flex-col items-center justify-center space-y-4 w-full">
+      {/* Main Image Container - Fixed Aspect Ratio (16:9) */}
+      <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
-          className="w-full max-h-[400px] object-cover rounded-lg shadow-lg"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute bottom-5 md:right-10 right-24 flex justify-between items-center gap-10">
+
+        {/* Navigation Controls */}
+        <div className="absolute inset-0 flex items-center justify-between p-4">
           <button
             onClick={goToPrevious}
-            className="   bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition"
+            className="bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition z-10"
+            aria-label="Previous image"
           >
             &#10094;
           </button>
-          <div className=" bg-black/50 text-white px-3 py-1 rounded-lg">
-            {currentIndex + 1}/{images.length}
-          </div>
           <button
             onClick={goToNext}
-            className="  bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition"
+            className="bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition z-10"
+            aria-label="Next image"
           >
             &#10095;
           </button>
         </div>
+
+        {/* Image Counter */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-lg text-sm">
+          {currentIndex + 1}/{images.length}
+        </div>
       </div>
-      {/* Thumbnails */}
-      <div className="flex space-x-2">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Thumbnail ${index}`}
-            onClick={() => goToImage(index)}
-            className={`w-16 h-16 object-cover rounded-lg cursor-pointer transition-opacity ${
-              index === currentIndex
-                ? "opacity-100 border-2 border-blue-500"
-                : "opacity-50 hover:opacity-80"
-            }`}
-          />
-        ))}
+
+      {/* Thumbnails - Scrollable if many images */}
+      <div className="w-full overflow-x-auto py-2">
+        <div className="flex space-x-2 w-max mx-auto">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              onClick={() => goToImage(index)}
+              className={`relative aspect-square w-16 h-16 rounded-lg cursor-pointer transition-all ${
+                index === currentIndex
+                  ? "ring-2 ring-blue-500"
+                  : "opacity-70 hover:opacity-100"
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Thumbnail ${index}`}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
