@@ -19,14 +19,15 @@ const Discount = () => {
       {/* Text Content */}
       <div className="absolute top-1/2 left-10 transform -translate-y-1/2 text-white">
         <p className="uppercase text-sm tracking-wide text-gray-300 mb-2">
-          Get an extra 20% off your first order
+          Obtenez 20% de reduction sur votre prestation
         </p>
         <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-          Enjoy your journey with <br />
-          our comfortable cars
+          Entretien et revision
+          <br />
+          VP AUTO 91
         </h2>
         <button className="mt-6 px-6 py-3 bg-white text-black font-semibold rounded-md hover:bg-gray-300 transition">
-          Shop Now
+          Prendre RDV
         </button>
       </div>
     </div>

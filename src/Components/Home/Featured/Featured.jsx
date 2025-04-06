@@ -109,7 +109,7 @@ const Featured = () => {
         <div className="md:w-3/4 mx-auto">
           <input
             type="text"
-            placeholder="Search by make, model or keyword (e.g. Renault Clio)"
+            placeholder="Recherche par modèle ou mot clé (exemple: Renault clio)"
             value={searchTerm}
             onChange={handleSearchChange}
             className="border border-red-500 text-sm rounded-lg p-2 w-full"
@@ -197,7 +197,7 @@ const Featured = () => {
 
       {/* Selected Filters */}
       <div className="text-xs text-gray-600 mb-4">
-        Selected Filters:{" "}
+        Filtres séléctionnés:{" "}
         {Object.entries(filters).map(([key, value]) => {
           if (value) {
             return (

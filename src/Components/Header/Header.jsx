@@ -35,7 +35,9 @@ const Header = () => {
               <Link href="/about-us">QUI SOMMES NOUS</Link>
             </li>
             <li>
-              <Link href="/contact">CONTACT</Link>
+              <Link href="/contact" className="uppercase">
+                Nous contacter{" "}
+              </Link>
             </li>
           </ul>
         </div>
@@ -93,7 +95,7 @@ const Header = () => {
               className="border-b"
               onClick={() => handleLinkClick("/contact")}
             >
-              <a className="block w-full py-4 px-6">CONTACT</a>
+              <a className="block w-full py-4 px-6">Nous Contacter</a>
             </li>
           </ul>
         </div>
