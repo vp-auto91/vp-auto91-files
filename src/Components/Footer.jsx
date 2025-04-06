@@ -4,13 +4,12 @@ const Footer = () => {
   return (
     <div>
       <footer className="footer sm:footer-horizontal  text-black p-10">
-        <aside>
-          <p>
-            VP AUTO 91
-            <br />
-            Mécanique et parallélisme
-          </p>
-        </aside>
+        <nav>
+          <h6 className="text-red-500 font-bold">VP AUTO 91</h6>
+          <a className="link link-hover">Mécanique</a>
+          <a className="link link-hover">Parallélisme</a>
+          <a className="link link-hover">Nos garanties</a>
+        </nav>
 
         <nav>
           <h6 className="footer-title">Liens utiles</h6>

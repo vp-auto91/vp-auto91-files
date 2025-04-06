@@ -43,9 +43,9 @@ const Header = () => {
         </div>
 
         <div className="navbar-end">
-          <Link href="/button-action" legacyBehavior>
+          <Link href="/contact" legacyBehavior>
             <button className="px-5 py-2 rounded-md bg-red-500 text-white hidden md:block">
-              Call us today
+              Nous Contacter
             </button>
           </Link>
 

@@ -106,7 +106,7 @@ const Featured = () => {
 
       {/* Search Bar and Filters */}
       <div className="mb-6">
-        <div className="md:w-3/4 mx-auto">
+        <div className="md:w-3/5 mx-auto">
           <input
             type="text"
             placeholder="Recherche par modèle ou mot clé (exemple: Renault clio)"
@@ -115,7 +115,7 @@ const Featured = () => {
             className="border border-red-500 text-sm rounded-lg p-2 w-full"
           />
         </div>
-        <div className="flex justify-center flex-wrap mt-4">
+        <div className="md:w-3/5 md:mx-auto flex md:justify-between justify-center flex-wrap mt-4">
           <select
             name="brand"
             onChange={handleFilterChange}
@@ -246,7 +246,7 @@ const Featured = () => {
                     <p className="text-gray-600 text-sm">
                       {car.year} - {car.mileage} Km
                     </p>
-                    <p className="text-gray-600 text-sm">Fuel: {car.fuel}</p>
+                    <p className="text-gray-600 text-sm">Energie: {car.fuel}</p>
                     <p className="text-gray-600 text-sm">
                       Gearbox: {car.gearbox}
                     </p>
@@ -254,7 +254,7 @@ const Featured = () => {
                   <p className="text-red-500 text-sm">{car.price} €</p>
                 </div>
                 <button className="cursor-pointer mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-500 transition text-sm">
-                  View Details
+                  Voir détails
                 </button>
               </div>
             </Link>
