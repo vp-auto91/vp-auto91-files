@@ -1,12 +1,13 @@
 import React from "react";
 
 import ImageSlider from "./ImageSlider";
+import SimilarProducts from "./SimilarProducts";
 
 const DefaultSingle = ({ product }) => {
   const images = product.images;
   return (
     <div className="">
-      <div className="my-16 mb-24 px-5 ">
+      <div className="my-16 mb-8 px-5 ">
         {/* Two-column grid for product details */}
         <div className="md:flex gap-10">
           {/* Left Column: Product Images */}
@@ -28,7 +29,7 @@ const DefaultSingle = ({ product }) => {
             <h1 className="text-xl font-bold text-gray-700 mb-5">
               {product?.model}
             </h1>
-            <div className="flex gap-5 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 mb-12  gap-4">
               {/* Brand */}
               <div className="w-full border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
@@ -44,54 +45,54 @@ const DefaultSingle = ({ product }) => {
                 </p>
                 <p className="text-lg text-gray-800">{product?.year}</p>
               </div>
+              {/* Gearbox */}
+              <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100 ">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Gearbox</span>
+                </p>
+                <p className="text-lg text-gray-800">{product?.gearbox}</p>
+              </div>
+
+              {/* Mileage */}
+              <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">KM</span>
+                </p>
+                <p className="text-lg text-gray-800">{product?.mileage} Km</p>
+              </div>
+
+              {/* Fuel */}
+              <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Fuel</span>
+                </p>
+                <p className="text-lg text-gray-800">{product?.fuel}</p>
+              </div>
+
+              {/* Location */}
+              <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Location</span>
+                </p>
+                <p className="text-lg text-gray-800">{product?.location}</p>
+              </div>
             </div>
 
             <div className="flex gap-5">
               <div className="w-full text-white bg-red-500 py-2.5 text-center  rounded-md">
-                <button className=" ">Contact Us</button>
+                <button className=" ">Contactez-nous</button>
               </div>
             </div>
           </div>
         </div>
-        <div className="my-24">
-          <h1 className="text-center my-5">Details</h1>
-          <div className="flex">
-            <div className="md:w-2/3 mb-8 mx-auto text-justify">
+        <div className="mb-8 mt-8">
+          {/* <h1 className="text-center my-5">Details</h1> */}
+          <div className="">
+            <div className="md:w-full text-justify pe-5">
               <p>{product?.description}</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4">
-            {/* Gearbox */}
-            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100 ">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">Gearbox</span>
-              </p>
-              <p className="text-lg text-gray-800">{product?.gearbox}</p>
-            </div>
-
-            {/* Mileage */}
-            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">KM</span>
-              </p>
-              <p className="text-lg text-gray-800">{product?.mileage} Km</p>
-            </div>
-
-            {/* Fuel */}
-            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">Fuel</span>
-              </p>
-              <p className="text-lg text-gray-800">{product?.fuel}</p>
-            </div>
-
-            {/* Location */}
-            <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">Location</span>
-              </p>
-              <p className="text-lg text-gray-800">{product?.location}</p>
-            </div>
             {/* Extra Fields */}
             {product?.extraFields?.map((field, index) => (
               <div

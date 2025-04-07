@@ -264,17 +264,17 @@ const Featured = () => {
         // ❌ No match — show similar
         <div className="text-center mt-8">
           <p className="text-lg text-gray-600 mb-4">
-            No cars found. Try adjusting your filters or{" "}
+            Aucun véhicule trouvé. Essayez d&apos;adjuster le filter or{" "}
             <span
               className="text-red-500 cursor-pointer"
               onClick={clearFilters}
             >
-              search directly
+              recherche directement
             </span>
             .
           </p>
           <h3 className="text-2xl font-bold mb-4">
-            Similar Cars You Might Like
+            Voiture similaire que vous aimeriez
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {getSimilarProducts().map((car, index) => (

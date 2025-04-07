@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Discount = () => {
   return (
-    <div className="relative w-full h-[400px] lg:h-[500px] mb-16">
+    <div className="relative w-full h-[400px] lg:h-[500px] mb-2">
       {/* Background Image */}
       <Image
         src="/images/CTA.png" // Replace with your actual image path

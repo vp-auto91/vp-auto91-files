@@ -84,19 +84,21 @@ const ContactPage = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="text-sm font-semibold text-gray-800">Adresse</h3>
-                <p className="text-gray-900">CARS</p>
-                <p className="text-gray-900">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Ullam, delectus!
+                <p className="text-gray-900 text-sm">VP AUTO 91</p>
+                <p className="text-gray-900 text-sm">
+                  12 rue du general deslestrain
                 </p>
+                <p className="text-gray-900 text-sm">91220 BRETIGNY SUR ORGE</p>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-800">Phone</h3>
+                <h3 className="text-sm font-semibold text-gray-800">
+                  Téléphone
+                </h3>
                 <p className="text-gray-900">0123456789</p>
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-gray-800">Email</h3>
-                <p className="text-gray-900">contact@demo</p>
+                <p className="text-gray-900">contact@vpauto91.fr</p>
               </div>
             </div>
           </div>

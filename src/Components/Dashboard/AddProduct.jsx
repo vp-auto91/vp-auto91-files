@@ -105,7 +105,7 @@ const AddProductForm = () => {
             {/* Name */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Name
+                Titre
               </label>
               <input
                 type="text"
@@ -122,7 +122,7 @@ const AddProductForm = () => {
             {/* Brand */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Brand
+                Marque
               </label>
               <input
                 type="text"
@@ -139,7 +139,7 @@ const AddProductForm = () => {
             {/* Model */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Model
+                Modéle
               </label>
               <input
                 type="text"
@@ -154,9 +154,9 @@ const AddProductForm = () => {
             </div>
 
             {/* Year */}
-            <div className="mb-5">
+            <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Year
+                Année
               </label>
               <input
                 type="number"
@@ -171,7 +171,7 @@ const AddProductForm = () => {
               {/* Mileage */}
               <div className="mt-3">
                 <label className="block text-sm font-medium text-gray-700">
-                  Mileage
+                  Kilométrage
                 </label>
                 <input
                   type="number"
@@ -190,7 +190,7 @@ const AddProductForm = () => {
             {/* Fuel */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Fuel
+                Energie
               </label>
               <select
                 className="w-full p-2 border border-gray-300 rounded-md"
@@ -210,7 +210,7 @@ const AddProductForm = () => {
             {/* Color */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Color
+                Couleur
               </label>
               <input
                 type="text"
@@ -227,7 +227,7 @@ const AddProductForm = () => {
             {/* Gearbox */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Gearbox
+                Transmission
               </label>
               <select
                 className="w-full p-2 border border-gray-300 rounded-md"
@@ -246,7 +246,7 @@ const AddProductForm = () => {
             {/* Location */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Location
+                Localisation
               </label>
               <input
                 type="text"
@@ -263,7 +263,7 @@ const AddProductForm = () => {
             {/* Price */}
             <div className="mb-3">
               <label className="block text-sm font-medium text-gray-700">
-                Price
+                Prix
               </label>
               <input
                 type="number"
@@ -279,12 +279,12 @@ const AddProductForm = () => {
           </div>
         </div>
         {/* Dynamic Fields */}
-        <div className="mb-3">
+        <div className=" hidden">
           <label className="block text-sm font-medium text-gray-700">
             Extra Fields
           </label>
           {extraFields.map((field, index) => (
-            <div key={index} className="flex gap-3 mb-3">
+            <div key={index} className="flex gap-3">
               <input
                 type="text"
                 placeholder="Field Name"
