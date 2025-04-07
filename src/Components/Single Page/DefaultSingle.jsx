@@ -2,6 +2,7 @@ import React from "react";
 
 import ImageSlider from "./ImageSlider";
 import SimilarProducts from "./SimilarProducts";
+import Link from "next/link";
 
 const DefaultSingle = ({ product }) => {
   const images = product.images;
@@ -80,7 +81,9 @@ const DefaultSingle = ({ product }) => {
 
             <div className="flex gap-5">
               <div className="w-full text-white bg-red-500 py-2.5 text-center  rounded-md">
-                <button className=" ">Contactez-nous</button>
+                <Link href="/contact">
+                  <button className="cursor-pointer ">Contactez-nous</button>
+                </Link>
               </div>
             </div>
           </div>

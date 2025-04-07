@@ -297,7 +297,9 @@ const Featured = () => {
                     <p className="text-gray-600 text-sm">
                       {car.year} - {car.mileage} Km
                     </p>
-                    <p className="text-gray-600 text-sm">Fuel: {car.fuel}</p>
+                    <p className="text-gray-600 text-sm text-start">
+                      Fuel: {car.fuel}
+                    </p>
                     <p className="text-gray-600 text-sm">
                       Gearbox: {car.gearbox}
                     </p>
