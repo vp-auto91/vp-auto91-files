@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -6,22 +7,34 @@ const Footer = () => {
       <footer className="footer sm:footer-horizontal  text-black p-10">
         <nav>
           <h6 className="text-red-500 font-bold">VP AUTO 91</h6>
-          <a className="link link-hover">Mécanique</a>
-          <a className="link link-hover">Parallélisme</a>
-          <a className="link link-hover">Nos garanties</a>
+          <p className="">Mécanique</p>
+          <p className="">Parallélisme</p>
+          <p className="">Nos garanties</p>
         </nav>
 
         <nav>
           <h6 className="footer-title">Liens utiles</h6>
-          <a className="link link-hover">Qui sommes-nous</a>
-          <a className="link link-hover">Contactez nous</a>
-          <a className="link link-hover">Nos garanties</a>
+          <Link href="/about-us" className="link link-hover">
+            Qui sommes-nous
+          </Link>
+          <Link href="/contact" className="link link-hover">
+            Contactez nous
+          </Link>
+          <Link href="/garantie" className="link link-hover">
+            Nos garanties
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Mentions Legales</a>
-          <a className="link link-hover">Conditions Utilisation</a>
-          <a className="link link-hover">Politique Confidentialité</a>
+          <Link href="/" className="link link-hover">
+            Mentions Legales
+          </Link>
+          <Link href="/" className="link link-hover">
+            Conditions Utilisation
+          </Link>
+          <Link href="/" className="link link-hover">
+            Politique Confidentialité
+          </Link>
           {/* <a className="link link-hover">Politique Cookies</a> */}
         </nav>
       </footer>
