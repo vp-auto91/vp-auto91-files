@@ -34,7 +34,7 @@ const DefaultSingle = ({ product }) => {
               {/* Brand */}
               <div className="w-full border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Brand</span>
+                  <span className="font-semibold">Marque</span>
                 </p>
                 <p className="text-lg text-gray-800">{product?.brand}</p>
               </div>
@@ -42,14 +42,14 @@ const DefaultSingle = ({ product }) => {
               {/* Year */}
               <div className="w-full border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Year</span>
+                  <span className="font-semibold">Année</span>
                 </p>
                 <p className="text-lg text-gray-800">{product?.year}</p>
               </div>
               {/* Gearbox */}
               <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100 ">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Gearbox</span>
+                  <span className="font-semibold">Transmission</span>
                 </p>
                 <p className="text-lg text-gray-800">{product?.gearbox}</p>
               </div>
@@ -57,7 +57,7 @@ const DefaultSingle = ({ product }) => {
               {/* Mileage */}
               <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">KM</span>
+                  <span className="font-semibold">Kilométrage</span>
                 </p>
                 <p className="text-lg text-gray-800">{product?.mileage} Km</p>
               </div>
@@ -65,7 +65,7 @@ const DefaultSingle = ({ product }) => {
               {/* Fuel */}
               <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Fuel</span>
+                  <span className="font-semibold">Energie</span>
                 </p>
                 <p className="text-lg text-gray-800">{product?.fuel}</p>
               </div>
@@ -73,7 +73,7 @@ const DefaultSingle = ({ product }) => {
               {/* Location */}
               <div className="border border-red-500 rounded-lg p-4 shadow-sm bg-gray-100">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Location</span>
+                  <span className="font-semibold">Localisation</span>
                 </p>
                 <p className="text-lg text-gray-800">{product?.location}</p>
               </div>
