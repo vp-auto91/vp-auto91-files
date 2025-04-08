@@ -5,10 +5,6 @@ import Head from "next/head";
 import { useState } from "react";
 
 const ContactPage = () => {
-  const pageDescription =
-    "Besoin d'aide sur votre boîte DSG ou DC4 ? Contactez notre support technique pour un diagnostic rapide et précis.";
-  const HeadingText = "Envoyez-nous un message, Assistance rapide";
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,7 +38,7 @@ const ContactPage = () => {
     }
 
     try {
-      const response = await fetch("/api/contactForm", {
+      const response = await fetch("/api/ContactForm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
