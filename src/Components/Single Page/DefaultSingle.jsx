@@ -5,6 +5,10 @@ import Link from "next/link";
 
 const DefaultSingle = ({ product }) => {
   const images = product.images;
+  {
+    console.log(product?.description);
+  }
+
   return (
     <div className="">
       <div className="my-16 mb-8 px-5 ">
@@ -87,15 +91,15 @@ const DefaultSingle = ({ product }) => {
             </div>
           </div>
         </div>
+
         <div className="mb-8 mt-8">
+          <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none">
+            <p dangerouslySetInnerHTML={{ __html: product?.description }} />
+          </div>
           {/* <h1 className="text-center my-5">Details</h1> */}
           <div className="">
             <div className="md:w-full text-justify pe-5">
               {/* <p>{product?.description}</p> */}
-              <div
-                className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none"
-                dangerouslySetInnerHTML={{ __html: product?.description }}
-              ></div>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4">

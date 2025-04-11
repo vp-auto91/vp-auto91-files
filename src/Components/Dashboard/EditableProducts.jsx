@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import CustomTextEditor from "./CustomTextEditor";
 
 export default function EditableProducts() {
   const [products, setProducts] = useState([]);
@@ -176,13 +177,17 @@ export default function EditableProducts() {
                               {field}
                             </label>
                             {field === "description" ? (
-                              <textarea
-                                name={field}
-                                value={editForm[field]}
-                                onChange={handleInputChange}
-                                className="w-full p-2 border rounded"
-                                rows={3}
-                              />
+                              <div className="border rounded-md">
+                                <CustomTextEditor
+                                  value={editForm.description}
+                                  onChange={(newValue) =>
+                                    setEditForm((prev) => ({
+                                      ...prev,
+                                      description: newValue,
+                                    }))
+                                  }
+                                />
+                              </div>
                             ) : (
                               <input
                                 type={field === "price" ? "number" : "text"}
@@ -385,7 +390,11 @@ export default function EditableProducts() {
                   </button>
                 </div>
 
-                <p className="text-gray-700">{product.description}</p>
+                <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none">
+                  <p
+                    dangerouslySetInnerHTML={{ __html: product?.description }}
+                  />
+                </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mt-6">
                   {[

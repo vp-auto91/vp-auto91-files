@@ -31,6 +31,21 @@ const AddProductForm = () => {
     setExtraFields(updatedFields);
   };
 
+  const cleanEditorHTML = (html) => {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = html;
+
+    // Replace <div><ul> or <div><ol> with direct <ul>/<ol> outside
+    wrapper.querySelectorAll("div > ul, div > ol").forEach((list) => {
+      const parent = list.parentElement;
+      if (parent.tagName === "DIV") {
+        parent.replaceWith(list);
+      }
+    });
+
+    return wrapper.innerHTML;
+  };
+
   const onSubmit = async (data) => {
     setLoading(true);
 
@@ -61,7 +76,7 @@ const AddProductForm = () => {
         fuel: data.fuel,
         gearbox: data.gearbox,
         location: data.location,
-        description: description,
+        description: cleanEditorHTML(description),
         price: data.price,
         images: imagesURLs,
         color: data.color,
@@ -322,9 +337,9 @@ const AddProductForm = () => {
             Description
           </label>
           <CustomTextEditor value={description} onChange={setDescription} />
-          {!description && (
+          {/* {!description && (
             <span className="text-red-500 text-sm">This field is required</span>
-          )}
+          )} */}
         </div>
 
         {/* Product Images */}
