@@ -10,16 +10,21 @@ const CustomTextEditor = ({ value, onChange }) => {
     underline: false,
   });
 
-  // Format command executor
+  // Execute formatting command
   const execFormatCommand = (command, value = null) => {
-    if (!editorRef.current) return;
     editorRef.current.focus();
+
+    // Force proper block formatting to allow lists to work
+    if (command === "insertUnorderedList" || command === "insertOrderedList") {
+      document.execCommand("formatBlock", false, "div");
+    }
+
     document.execCommand(command, false, value);
     updateActiveFormats();
     triggerChange();
   };
 
-  // Detect current format state
+  // Update toolbar state
   const updateActiveFormats = () => {
     setActiveFormats({
       bold: document.queryCommandState("bold"),
@@ -28,7 +33,7 @@ const CustomTextEditor = ({ value, onChange }) => {
     });
   };
 
-  // Sync content to parent
+  // Handle changes
   const triggerChange = useCallback(() => {
     if (editorRef.current && onChange) {
       onChange(editorRef.current.innerHTML);
@@ -45,7 +50,7 @@ const CustomTextEditor = ({ value, onChange }) => {
     triggerChange();
   };
 
-  // Focus caret at end if empty
+  // Cursor to end on focus if empty
   const handleFocus = () => {
     const el = editorRef.current;
     if (el && el.textContent === "") {
@@ -58,14 +63,14 @@ const CustomTextEditor = ({ value, onChange }) => {
     }
   };
 
-  // Initialize value
+  // Set initial value
   useEffect(() => {
     if (
       editorRef.current &&
       value !== undefined &&
       value !== editorRef.current.innerHTML
     ) {
-      editorRef.current.innerHTML = value || "";
+      editorRef.current.innerHTML = value;
     }
   }, [value]);
 
@@ -103,14 +108,14 @@ const CustomTextEditor = ({ value, onChange }) => {
         />
       </div>
 
-      {/* Editor */}
+      {/* Editable area */}
       <div
         ref={editorRef}
         contentEditable
         spellCheck={true}
         autoCorrect="on"
         autoCapitalize="sentences"
-        className="min-h-[150px] p-3 outline-none whitespace-pre-wrap break-words"
+        className="h-[350px] p-3 outline-none whitespace-pre-wrap break-words overflow-y-scroll"
         onInput={triggerChange}
         onPaste={handlePaste}
         onKeyUp={updateActiveFormats}
@@ -122,7 +127,7 @@ const CustomTextEditor = ({ value, onChange }) => {
   );
 };
 
-// Toolbar Button Component
+// Toolbar Button component
 const FormatButton = ({ label, icon, active, onClick }) => (
   <button
     type="button"
@@ -137,16 +142,3 @@ const FormatButton = ({ label, icon, active, onClick }) => (
 );
 
 export default CustomTextEditor;
-
-// <div className="mb-3">
-//   <label className="block text-sm font-medium text-gray-700">
-//     Description
-//   </label>
-//   <textarea
-//     className="w-full p-2 border border-gray-300 rounded-md"
-//     {...register("description", { required: true })}
-//   />
-//   {errors.description && (
-//     <span className="text-red-500 text-sm">This field is required</span>
-//   )}
-// </div>

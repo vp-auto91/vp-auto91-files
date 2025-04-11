@@ -93,7 +93,7 @@ const DefaultSingle = ({ product }) => {
             <div className="md:w-full text-justify pe-5">
               {/* <p>{product?.description}</p> */}
               <div
-                className="prose max-w-none"
+                className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none"
                 dangerouslySetInnerHTML={{ __html: product?.description }}
               ></div>
             </div>
