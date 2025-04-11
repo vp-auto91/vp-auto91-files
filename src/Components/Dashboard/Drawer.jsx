@@ -37,7 +37,7 @@ const Drawer = () => {
                     onClick={() => setActiveView("add")}
                     className={activeView === "add" ? "active" : ""}
                   >
-                    Add products
+                    Ajouter des produits
                   </a>
                 </li>
                 <li>
@@ -45,7 +45,7 @@ const Drawer = () => {
                     onClick={() => setActiveView("edit")}
                     className={activeView === "edit" ? "active" : ""}
                   >
-                    Edit products
+                    Modifier les produits
                   </a>
                 </li>
                 <li>
@@ -53,11 +53,11 @@ const Drawer = () => {
                     onClick={() => setActiveView("delete")}
                     className={activeView === "delete" ? "active" : ""}
                   >
-                    Delete products
+                    Supprimer des produits
                   </a>
                 </li>
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="/">Accueil</Link>
                 </li>
               </ul>
             </div>

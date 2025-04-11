@@ -1,7 +1,6 @@
 import React from "react";
 
 import ImageSlider from "./ImageSlider";
-import SimilarProducts from "./SimilarProducts";
 import Link from "next/link";
 
 const DefaultSingle = ({ product }) => {
@@ -92,7 +91,11 @@ const DefaultSingle = ({ product }) => {
           {/* <h1 className="text-center my-5">Details</h1> */}
           <div className="">
             <div className="md:w-full text-justify pe-5">
-              <p>{product?.description}</p>
+              {/* <p>{product?.description}</p> */}
+              <div
+                className="prose max-w-none"
+                dangerouslySetInnerHTML={{ __html: product?.description }}
+              ></div>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-4">

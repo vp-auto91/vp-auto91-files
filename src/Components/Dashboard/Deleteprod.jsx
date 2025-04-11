@@ -58,8 +58,8 @@ export default function Deleteprod() {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-6">Delete Products</h1>
+    <div className="p-4 w-full mx-auto overflow-y-scroll max-h-[700px] px-5">
+      <h1 className="text-2xl font-bold mb-6">Supprimer des produits</h1>
 
       <div className="grid grid-cols-1 gap-4">
         {products.map((product) => (

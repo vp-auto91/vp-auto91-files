@@ -157,7 +157,7 @@ export default function EditableProducts() {
 
   return (
     <div className="w-full mx-auto overflow-y-scroll max-h-[700px] px-5">
-      <h1 className="text-2xl font-bold mb-6">Edit Product </h1>
+      <h1 className="text-2xl font-bold mb-6">Modifier les produits </h1>
 
       <div className="grid grid-cols-1 gap-6">
         {products.map((product) => (

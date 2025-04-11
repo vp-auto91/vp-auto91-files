@@ -4,11 +4,13 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import ImageUploader from "./ImageUploader";
+import CustomTextEditor from "./CustomTextEditor";
 
 const AddProductForm = () => {
   const [loading, setLoading] = useState(false);
   const [selectedImages, setSelectedImages] = useState([]);
   const [extraFields, setExtraFields] = useState([]); // State to manage dynamic fields
+  const [description, setDescription] = useState("");
 
   const {
     register,
@@ -59,7 +61,7 @@ const AddProductForm = () => {
         fuel: data.fuel,
         gearbox: data.gearbox,
         location: data.location,
-        description: data.description,
+        description: description,
         price: data.price,
         images: imagesURLs,
         color: data.color,
@@ -98,7 +100,7 @@ const AddProductForm = () => {
 
   return (
     <div className="w-full mx-auto overflow-y-scroll max-h-[700px] px-5">
-      <h1 className="text-center mb-5 text-lg">Add Product</h1>
+      <h1 className="text-center mb-5 text-lg">Ajouter des produits</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="flex gap-3 ">
           <div className="w-1/2">
@@ -314,16 +316,13 @@ const AddProductForm = () => {
           </button>
         </div>
 
-        {/* Description */}
+        {/* Custom Text Editor */}
         <div className="mb-3">
-          <label className="block text-sm font-medium text-gray-700">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Description
           </label>
-          <textarea
-            className="w-full p-2 border border-gray-300 rounded-md"
-            {...register("description", { required: true })}
-          />
-          {errors.description && (
+          <CustomTextEditor value={description} onChange={setDescription} />
+          {!description && (
             <span className="text-red-500 text-sm">This field is required</span>
           )}
         </div>
