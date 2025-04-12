@@ -314,14 +314,14 @@ const Featured = () => {
       {/* Main Logic */}
       {cardLoad ? (
         // ⏳ Skeletons while loading
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {[1, 2, 3, 4].map((_, i) => (
             <ProductCardSkeleton key={i} />
           ))}
         </div>
       ) : filteredCars.length > 0 ? (
         // ✅ Filtered car results
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {filteredCars.map((car, index) => (
             <Link
               key={index}
@@ -341,9 +341,9 @@ const Featured = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
-                <div className="flex justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold">{car.name}</h3>
+                <div className="flex  justify-between">
+                  <div className="w-[80%] ">
+                    <h3 className="text-[17px] font-semibold">{car.name}</h3>
                     <p className="text-gray-600 text-sm">
                       {car.year} - {car.mileage} Km
                     </p>
@@ -352,7 +352,9 @@ const Featured = () => {
                       Transmission: {car.gearbox}
                     </p>
                   </div>
-                  <p className="text-red-500 text-sm">{car.price} €</p>
+                  <div className="">
+                    <p className="text-red-500 text-sm">{car.price} €</p>
+                  </div>
                 </div>
                 <button className="cursor-pointer mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-500 transition text-sm">
                   Voir détails
