@@ -15,7 +15,7 @@ const Garantie = () => {
             Nos garanties
           </h2>
           <div className="flex garantie gap-8">
-            <div className="md:w-1/2">
+            <div className="md:w-2/3">
               {/* Introductory Text */}
               <p className="text-sm text-gray-600  text-justify mx-auto mb-5">
                 Chez nous, chaque voiture vendue est bien plus qu’un simple
@@ -51,11 +51,11 @@ const Garantie = () => {
                 fiable, révisé, garanti, et prêt à vous accompagner.
               </p>
             </div>
-            <div className="md:w-1/2 ">
+            <div className="md:w-1/3 ">
               <Image
-                src="/images/g2.webp"
+                src="/images/garan.webp"
                 alt="Hybrid Electric Cars"
-                width={600}
+                width={300}
                 height={500}
                 className="rounded-lg mx-auto"
               />

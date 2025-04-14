@@ -343,7 +343,9 @@ const Featured = () => {
                 </div>
                 <div className="flex  justify-between">
                   <div className="w-[80%] ">
-                    <h3 className="text-[17px] font-semibold">{car.name}</h3>
+                    <div className="">
+                      <h3 className="text-[17px] font-semibold">{car.name}</h3>
+                    </div>
                     <p className="text-gray-600 text-sm">
                       {car.year} - {car.mileage} Km
                     </p>
