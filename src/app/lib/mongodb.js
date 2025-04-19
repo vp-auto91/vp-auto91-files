@@ -2,7 +2,6 @@
 import { MongoClient } from "mongodb";
 
 const uri = `mongodb+srv://${process.env.NEXT_MONGO_USER}:${process.env.NEXT_MONGO_PASS}@vba-laboiteautomatique.5j1p4.mongodb.net/?retryWrites=true&w=majority&appName=VBA-laboiteautomatique`;
-// const uri = `mongodb+srv://clictrust2:R2goMYOyw3OVk7Fn@vba-laboiteautomatique.5j1p4.mongodb.net/?retryWrites=true&w=majority&appName=VBA-laboiteautomatique`;
 
 let client;
 let clientPromise;
