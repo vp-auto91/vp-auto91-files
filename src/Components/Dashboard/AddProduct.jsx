@@ -214,9 +214,10 @@ const AddProductForm = () => {
                 {...register("fuel", { required: true })}
               >
                 <option value="Petrol">Petrol</option>
+                <option value="Petrol">Essence</option>
                 <option value="Diesel">Diesel</option>
                 <option value="Electric">Electric</option>
-                <option value="Hybrid">Hybrid</option>
+                <option value="Hybrid">Hybride</option>
               </select>
               {errors.fuel && (
                 <span className="text-red-500 text-sm">
@@ -250,8 +251,8 @@ const AddProductForm = () => {
                 className="w-full p-2 border border-gray-300 rounded-md"
                 {...register("gearbox", { required: true })}
               >
-                <option value="Manual">Manual</option>
-                <option value="Automatic">Automatic</option>
+                <option value="Manual"> Manuelle</option>
+                <option value="Automatic">Automatique</option>
               </select>
               {errors.gearbox && (
                 <span className="text-red-500 text-sm">
